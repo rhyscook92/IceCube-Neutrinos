@@ -1,0 +1,5 @@
+The animation on the right visualises three key features of the competiton data:
+
+* The layout of the 5160 DOM sensors.
+* The direction of the incoming neutrino - this is done by plotting the direction vector in red. The direction vector is forced to pass through the sensor that recorded the highest energy interaction.
+* The energy pulses captured by the DOM sensors. These are displayed as larger coloured spheres which appear as the animations moves forward in time. For each frame in the animation we view *the sum of energy* observed by each sensor at that time.
