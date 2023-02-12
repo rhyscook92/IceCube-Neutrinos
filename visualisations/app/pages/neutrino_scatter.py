@@ -13,11 +13,12 @@ how_to_text = get_how_to_text()
 def content(app):
     @app.callback(
         Output("scatter_3d", "figure"),
-        [Input("event_dropdown", "value"),
-         Input("auxiliary_dropdown", "value")]
+        [Input("event_dropdown", "value"), Input("auxiliary_dropdown", "value")],
     )
     def get_figure(event_id, aux_filter):
-        figure = build_event_fig(event_id, sensor_geometry, train, train_meta, aux_filter)
+        figure = build_event_fig(
+            event_id, sensor_geometry, train, train_meta, aux_filter
+        )
         return figure
 
     @app.callback(
@@ -78,9 +79,15 @@ def content(app):
                                             dbc.Col(
                                                 [
                                                     html.H4("Select Auxiliary Filter"),
-                                                    dcc.Dropdown(options=["True Only", "False Only", "Either True or False"],
-                                                                 value='Either True or False',
-                                                                 id="auxiliary_dropdown"),
+                                                    dcc.Dropdown(
+                                                        options=[
+                                                            "True Only",
+                                                            "False Only",
+                                                            "Either True or False",
+                                                        ],
+                                                        value="Either True or False",
+                                                        id="auxiliary_dropdown",
+                                                    ),
                                                 ]
                                             ),
                                         ]
@@ -109,6 +116,5 @@ def content(app):
                 ),
             ),
         ],
-        fluid=True,
-        style={"height": "120vh"},
+        fluid=True
     )
