@@ -1,0 +1,7 @@
+The animation is quite straight forward to use:
+
+1. Select the event ID you are interested in watching in the dropdown.
+2. Choose whether to filter by the auxiliary flag.
+2. Hit play!
+3. The chart is interactive so you can pivot the camera, zoom in, etc. *but only when the animation is not playing*. 
+4. To help understand the data the top interactions based on the size of the charge observed are displayed in a table, along with the sensor coordinates that recorded the interaction. 
